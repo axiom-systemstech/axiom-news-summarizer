@@ -1,0 +1,31 @@
+toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "axiom-news-summarizer"
+version = "1.0.0"
+description = "AI-powered news summarizer CLI tool by AXIOM Systems"
+authors = [
+    {name = "Manuel Echepares / AXIOM Systems", email = "axiom@systemstech.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31.0",
+    "newspaper3k>=0.2.8",
+    "transformers>=4.36.0",
+    "torch>=2.1.0",
+    "feedparser>=6.0.10",
+    "rich>=13.7.0"
+]
+
+[project.scripts]
+axiom-news-summarizer = "axiom_summarizer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/axiom-systemstech/axiom-news-summarizer"
+Repository = "https://github.com/axiom-systemstech/axiom-news-summarizer"
+
